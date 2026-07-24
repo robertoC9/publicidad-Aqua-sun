@@ -1,0 +1,21 @@
+{
+  "name": "aqua-sun-backend",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Backend REST y eventos GA4 para AQUA SUN.",
+  "main": "src/server.js",
+  "scripts": {
+    "start": "node src/server.js",
+    "dev": "node --watch src/server.js"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "node-fetch": "^3.3.2"
+  }
+}

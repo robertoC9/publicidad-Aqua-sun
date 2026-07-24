@@ -1,0 +1,51 @@
+<svg width="700" height="700" viewBox="0 0 700 700" xmlns="http://www.w3.org/2000/svg">
+
+  <!-- POP-ART EXPLOSION -->
+  <g transform="translate(350,350)">
+    <polygon points="
+      0,-300 80,-240 180,-260 140,-160 220,-80
+      120,-40 140,60 40,80 0,180 -40,80
+      -140,60 -120,-40 -220,-80 -140,-160
+      -180,-260 -80,-240
+    "
+    fill="#D6007A" stroke="#000" stroke-width="12"/>
+  </g>
+
+  <!-- CÍRCULO PRINCIPAL -->
+  <circle cx="350" cy="350" r="240"
+    fill="#001F3F" stroke="#000" stroke-width="16"/>
+
+  <!-- TEXTO AQUA SUN -->
+  <text x="350" y="330"
+    font-family="Bangers"
+    font-size="120"
+    fill="#FFFFFF"
+    stroke="#000"
+    stroke-width="10"
+    text-anchor="middle">
+    AQUA SUN
+  </text>
+
+  <!-- SOMBRA AMARILLA -->
+  <text x="350" y="330"
+    font-family="Bangers"
+    font-size="120"
+    fill="none"
+    stroke="#FFE600"
+    stroke-width="4"
+    text-anchor="middle">
+    AQUA SUN
+  </text>
+
+  <!-- TEXTO SECUNDARIO -->
+  <text x="350" y="430"
+    font-family="Comic Neue"
+    font-size="40"
+    fill="#00E5FF"
+    stroke="#000"
+    stroke-width="4"
+    text-anchor="middle">
+    Verano sin límites
+  </text>
+
+</svg>

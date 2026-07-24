@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="AQUA SUN, edición limitada con sabor tropical.">
+  <title>AQUA SUN | Verano sin Límites</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bangers&family=Comic+Neue:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <audio id="backgroundMusic" autoplay loop preload="auto">
+    <source src="lately-003.mp3" type="audio/mpeg">
+  </audio>
+
+  <div id="video-wrapper" aria-hidden="true">
+    <video id="lataVideo" autoplay muted loop playsinline preload="auto">
+      <source src="video.mp4" type="video/mp4">
+      Tu navegador no admite video HTML5.
+    </video>
+  </div>
+
+  <div id="final-video-wrapper" aria-hidden="true">
+    <video id="finalVideo" muted playsinline preload="auto">
+      <source src="perfecto_con_esa_imagen_hacer(1).mp4" type="video/mp4">
+    </video>
+    <img src="aqua-sun-logo.svg" id="logoFinal" alt="AQUA SUN">
+  </div>
+
+  <header id="image-header" aria-label="AQUA SUN">
+    <img src="aqua-sun-logo.svg" id="logoHeader" alt="AQUA SUN">
+  </header>
+
+  <main>
+    <section class="content-section" id="comprar" aria-labelledby="content-title" aria-hidden="true">
+      <div class="content-panel">
+        <h1 class="content-title" id="content-title">Edición Limitada</h1>
+        <p class="content-text">
+          Descubre el sabor del verano con <span class="brand-green">AQUA SUN</span>.
+          Una experiencia refrescante tropical.
+        </p>
+        <div class="flavor-list">
+          <article class="flavor-card">
+            <h2>Tropical</h2>
+            <p>Mango &amp; Maracuyá</p>
+          </article>
+          <article class="flavor-card">
+            <h2>Citrus</h2>
+            <p>Limón &amp; Naranja</p>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer-texture">
+    <p class="footer-text">&copy; 2025 AQUA SUN. Todos los derechos reservados.</p>
+    <nav class="footer-nav" aria-label="Redes sociales">
+      <a href="#" class="footer-link">Instagram</a>
+      <a href="#" class="footer-link">Facebook</a>
+      <a href="#" class="footer-link">TikTok</a>
+    </nav>
+  </footer>
+
+  <script src="script.js?v=audio-2" defer></script>
+</body>
+</html>

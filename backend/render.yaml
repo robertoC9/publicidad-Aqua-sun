@@ -1,0 +1,12 @@
+services:
+  - type: web
+    name: aqua-sun-backend
+    runtime: node
+    rootDir: .
+    buildCommand: npm install
+    startCommand: npm start
+    envVars:
+      - key: GA4_MEASUREMENT_ID
+        sync: false
+      - key: GA4_API_SECRET
+        sync: false
