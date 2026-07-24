@@ -4,16 +4,25 @@
 
 * { box-sizing: border-box; }
 
-html, body { min-height: 100%; }
-html { background: #000; }
+html, body {
+  min-height: 100%;
+  width: 100%;
+}
+html {
+  background: #000;
+  -webkit-text-size-adjust: 100%;
+}
 
 body {
   margin: 0;
   min-height: 100vh;
-  overflow: hidden;
+  width: 100%;
+  overflow-x: hidden;
+  overflow-y: auto;
   font-family: "Comic Neue", Arial, sans-serif;
   color: #fff;
   background: transparent;
+  text-rendering: optimizeLegibility;
 }
 
 #video-wrapper {
@@ -23,6 +32,8 @@ body {
   overflow: hidden;
   background: #052a42;
   transition: opacity 1.2s ease-in-out;
+  min-width: 100%;
+  min-height: 100%;
 }
 
 #logoHeader,
@@ -182,10 +193,28 @@ main {
 .content-text { margin: 0; font-size: clamp(1.05rem, 3vw, 1.3rem); text-shadow: 1px 1px 2px #000; }
 .brand-green { color: #00e5ff; font-weight: 700; }
 
-.flavor-list { display: flex; justify-content: center; gap: 1rem; margin-top: 1.5rem; }
-.flavor-card { flex: 1; padding: 1rem; border: 1px solid #ffe600; border-radius: 12px; background: rgb(255 255 255 / 7%); }
+.flavor-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+.flavor-card {
+  flex: 1 1 180px;
+  padding: 1rem;
+  border: 1px solid #ffe600;
+  border-radius: 12px;
+  background: rgb(255 255 255 / 7%);
+  min-width: 140px;
+}
 .flavor-card h2, .flavor-card p { margin: 0; }
-.flavor-card h2 { font-family: Bangers, cursive; font-size: 1.65rem; font-weight: 400; letter-spacing: .04em; }
+.flavor-card h2 {
+  font-family: Bangers, cursive;
+  font-size: 1.65rem;
+  font-weight: 400;
+  letter-spacing: .04em;
+}
 
 .footer-texture {
   position: fixed;
@@ -202,6 +231,97 @@ main {
   background-color: rgb(0 12 25 / 38%);
   overflow: hidden;
   transition: opacity 1.2s ease-in-out;
+}
+
+@media (max-width: 900px) {
+  .content-section {
+    width: min(90vw, 640px);
+  }
+
+  .content-panel {
+    padding: clamp(1rem, 3vw, 2rem);
+  }
+
+  .content-title {
+    font-size: clamp(2.4rem, 7vw, 4rem);
+  }
+
+  .content-text {
+    font-size: clamp(1rem, 3vw, 1.2rem);
+  }
+
+  .flavor-card {
+    min-width: 180px;
+  }
+
+  #logoHeader,
+  #logoFinal {
+    right: clamp(.75rem, 4vw, 1.2rem);
+    bottom: clamp(.75rem, 4vw, 1.2rem);
+  }
+}
+
+@media (max-width: 760px) {
+  html { font-size: 98%; }
+
+  main {
+    padding: 1.2rem 1rem 7.5rem;
+  }
+
+  .content-section {
+    width: min(95vw, 600px);
+  }
+
+  .content-title {
+    font-size: clamp(2rem, 9vw, 3.2rem);
+  }
+
+  .flavor-list {
+    gap: .85rem;
+  }
+
+  .footer-texture {
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: center;
+    text-align: center;
+    min-height: auto;
+    padding: 1rem 1.25rem 1rem;
+  }
+
+  .footer-nav {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+}
+
+@media (max-width: 560px) {
+  .footer-texture {
+    flex-direction: column;
+    gap: .35rem;
+    padding-block: .5rem;
+  }
+  main { padding-bottom: 7.5rem; }
+  .flavor-list { gap: .6rem; }
+  .flavor-card { padding: .75rem .45rem; }
+}
+
+@media (max-width: 420px) {
+  .content-panel {
+    padding: 1rem .85rem;
+  }
+
+  .content-title {
+    font-size: clamp(1.8rem, 11vw, 2.7rem);
+  }
+
+  .content-text {
+    font-size: 1rem;
+  }
+
+  .flavor-card {
+    padding: .85rem .85rem;
+  }
 }
 
 body.page-fade-out #video-wrapper,
@@ -232,13 +352,5 @@ body.page-fade-out .footer-texture {
 .footer-link { color: #ffe600; font-weight: 700; text-decoration: none; text-shadow: 1px 1px 2px #000; }
 .footer-link:hover, .footer-link:focus-visible { color: #ff0099; }
 
-@media (max-width: 560px) {
-  .footer-texture { flex-direction: column; gap: .35rem; padding-block: .5rem; }
-  main { padding-bottom: 7.5rem; }
-  .flavor-list { gap: .6rem; }
-  .flavor-card { padding: .75rem .45rem; }
-}
 
-@media (prefers-reduced-motion: reduce) {
-  *, *::before, *::after { transition-duration: .01ms !important; }
 }
